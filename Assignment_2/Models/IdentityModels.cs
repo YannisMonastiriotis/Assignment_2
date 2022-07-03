@@ -30,5 +30,7 @@ namespace Assignment_2.Models
         {
             return new ApplicationDbContext();
         }
+
+       
     }
 }

@@ -9,7 +9,7 @@ namespace Assignment_2.Models
 {
     public class Trainer
     {
-
+        public int Id { get; set; }
 
         [StringLength(50)]
         public string LastName { get; set; }
@@ -29,7 +29,7 @@ namespace Assignment_2.Models
         [StringLength(35)]
         public string City { get; set; }
 
-
+        public ushort PostalCode { get; set; }
 
         [StringLength(35)]
 
@@ -37,7 +37,7 @@ namespace Assignment_2.Models
 
 
 
-        public ushort StreetNo { get; set; }
+        public ushort? StreetNo { get; set; }
 
         [DataType(DataType.MultilineText)]
         public string Details { get; set; }
@@ -48,7 +48,7 @@ namespace Assignment_2.Models
         public string Gender { get; set; }
 
         [DataType(DataType.Currency)]
-        public decimal Salary { get; set; }
+        public decimal? Salary { get; set; }
 
 
         [EmailAddress]
