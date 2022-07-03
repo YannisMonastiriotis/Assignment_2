@@ -16,14 +16,15 @@
         <hr />
 
     </div>
-    <footer>
-        <p>&copy; @DateTime.Now.Year - TrainerKreator™ Application</p>
-    </footer>
+
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-
+    <footer>
+        <p>&copy; @DateTime.Now.Kind Time: @DateTime.Now.Hour : @DateTime.Now.Minute - TrainerKreator™ Application</p>
+    </footer>
 </body>
 
 </html>

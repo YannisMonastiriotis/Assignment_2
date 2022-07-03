@@ -6870,7 +6870,7 @@ a.list-group-item-danger.active:focus {
   border: none;
 }
 .panel-default > .panel-heading {
-  background-color: #485563;
+  background-color: #677681;
   color: #ebebeb;
 }
 .thumbnail {
@@ -6882,16 +6882,24 @@ a.list-group-item-danger.active:focus {
 }
 .modal-header,
 .modal-footer {
-  background-color: #485563;
+  background-color: #576572;
   border: none;
   border-radius: 0;
 }
 .popover-title {
   border: none;
+  color: white;
+  background-color:#536271;
 }
 
 [type="date"] {
-    background: #485563 url(C:\Users\rizla\Projects\3_7\Assignment_2\Assignment_2\img\paisaje-de-rick-y-morty-9415.jpg) 97% 50% no-repeat;
+    background: #5a656f url(C:\Users\rizla\Projects\3_7\Assignment_2\Assignment_2\img\paisaje-de-rick-y-morty-9415.jpg) 97% 50% no-repeat;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: auto;
+    background-size: cover;
+    position: relative;
+    border-radius: 2%;
 }
 
     [type="date"]::-webkit-inner-spin-button {
@@ -6907,7 +6915,7 @@ a.list-group-item-danger.active:focus {
 
 body {
     padding: 4em;
-    background: #a9c5d3;
+    background: #c5cacb;
     font: 13px/1.4 Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
 }
 
@@ -6916,7 +6924,7 @@ label {
 }
 
 input {
-    border: 1px solid #3d4954;
+    border: 1px solid #969ca1;
     border-radius: 5px;
     background-color: #d9534f;
     padding: 3px 5px;
@@ -6949,4 +6957,21 @@ form {
 
 .circle {
     border-radius: 3px;
+}
+
+.no-repeat {
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: auto;
+    background-size: cover;
+    position: relative;
+    border-radius: 2%;
+    background-image: linear-gradient(to right, rgba(164,120,204,0.72),rgba(96,72,255,0.72)),
+        url('/img/programmer-here-not-a-magician.jpg');
+}
+
+.tableGod {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 100%;
+    text-decoration-style: wavy;
 }

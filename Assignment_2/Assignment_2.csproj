@@ -203,6 +203,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="img\paisaje-de-rick-y-morty-9415.jpg" />
+    <Content Include="img\programmer-here-not-a-magician.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
