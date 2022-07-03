@@ -42,15 +42,20 @@ namespace Assignment_2.Controllers
         [HttpPost]
         public ActionResult Create(Trainer trainer)
         {
-            try
+            if (!ModelState.IsValid)
+                return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
+                try
             {
-                // TODO: Add insert logic here
+                
+                _trainerRepos.Create(trainer);
+                _trainerRepos.Save();
 
-                return RedirectToAction("Index");
+
+                return RedirectToAction("Index","Home");
             }
             catch
             {
-                return View();
+                return View("Create", trainer);
             }
         }
 
@@ -96,6 +101,12 @@ namespace Assignment_2.Controllers
             {
                 return View();
             }
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+                _trainerRepos.Dispose();
         }
     }
 }

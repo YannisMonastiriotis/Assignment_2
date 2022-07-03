@@ -46,7 +46,7 @@ namespace Assignment_2.ViewModels
             public string City { get; set; }
 
             [RegularExpression(@"^[a-zA-Z-.-/-_ ]+$", ErrorMessage = "Invalid Input, no special symbols or numbers please ")]
-        [Required(ErrorMessage = "Street name is required.")]
+             [Required(ErrorMessage = "Street name is required.")]
             [StringLength(35)]
             [Display(Name = "Street Name")]
             public string StreetName { get; set; }
@@ -57,7 +57,7 @@ namespace Assignment_2.ViewModels
             [RegularExpression(@"^[0-9]*$", ErrorMessage = "Invalid Input. Use only numbers please")]
             public ushort? StreetNo { get; set; } //^( [1 - 9]+[0-9]* | [1-9])$
         
-            [RegularExpression(@"/^[a-zA-Z\s_ ]*$/", ErrorMessage = "Invalid Input, no special symbols or numbers please")]
+            [RegularExpression(@"^[a-zA-Z-.-/-_ ]+$", ErrorMessage = "Invalid Input, no special symbols or numbers please")]
             [DataType(DataType.MultilineText)]
             public string Details { get; set; }
 
@@ -67,8 +67,8 @@ namespace Assignment_2.ViewModels
             public string PhoneNum { get; set; }
 
              [StringLength(35)]
-             [RegularExpression(@"/^[a-zA-Z\s]*$/", ErrorMessage = "Invalid Input, no special symbols,spaces or numbers please")]
-            public string Gender { get; set; }
+             [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Invalid Input, no special symbols or numbers please")]
+              public string Gender { get; set; }
 
             
             [DataType(DataType.Currency)]

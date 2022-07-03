@@ -10,7 +10,7 @@ using System.Web.Mvc;
 
 namespace Assignment_2.Repositories
 {
-    public class TrainerCrudRepository
+    public class TrainerCrudRepository: IDisposable
     {
         private readonly ApplicationDbContext _context;
 
@@ -46,6 +46,14 @@ namespace Assignment_2.Repositories
             };
             return viewModel;
 
+        }
+        public void Create (Trainer trainer)
+        {
+            if (trainer == null)
+                throw new HttpException(404, "Error at the beginning of Creation");
+               _context.Trainers.Add(trainer);
+            _context.Trainers.Add(trainer);
+            Save();
         }
         public void Create(TrainerViewModel trainerViewModel)
         {
@@ -111,6 +119,11 @@ namespace Assignment_2.Repositories
 
             _context.Trainers.Remove(trainer);
             Save();
+        }
+
+        public void Dispose()
+        {
+            _context.Dispose();
         }
     }
 }
