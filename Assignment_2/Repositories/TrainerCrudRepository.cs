@@ -50,7 +50,7 @@ namespace Assignment_2.Repositories
         {
             if (trainer == null)
                 throw new HttpException(404, "Error at the beginning of Creation");
-            _context.Trainers.Add(trainer);
+
             _context.Trainers.Add(trainer);
             Save();
         }
@@ -115,7 +115,7 @@ namespace Assignment_2.Repositories
         public IEnumerable<Trainer> GetAll()
         {
             var trainers = _context
-                .Trainers;
+                .Trainers.ToList();
 
             return trainers;
         }
