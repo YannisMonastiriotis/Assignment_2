@@ -22,16 +22,8 @@ namespace Assignment_2.Controllers
 
             public ActionResult GetAction()
             {
-                var trainers = _trainerRepos.GetAll();
-
-            var partialView = new PartialTrainerViewModel()
-            {
-                TrainerViewModel = new TrainerViewModel
-                {
-                    Trainers = trainers.ToList()
-                }            
-            };
-
+                 var partialView =    _trainerRepos.GetListOfTrainers();
+ 
                 return View(partialView);
             }
 

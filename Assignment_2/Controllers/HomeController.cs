@@ -17,7 +17,11 @@ namespace Assignment_2.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var model = new TrainerViewModel
+            {
+                Trainers = _trainerRepos.GetAll().ToList()
+            };
+            return View(model);
         }
 
         

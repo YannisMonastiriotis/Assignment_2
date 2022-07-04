@@ -82,6 +82,17 @@ namespace Assignment_2.Repositories
             Save();
         }
 
+        public IEnumerable<TrainerViewModel> GetListOfTrainers()
+        {
+            var trainers = GetAll();
+            List<TrainerViewModel> trainerViewModels = new List<TrainerViewModel>();
+
+            foreach(var trainer in trainers)
+            {
+                trainerViewModels.Add(CreateTrainerViewModel(trainer));
+            }
+            return trainerViewModels.ToList();
+        }
         public TrainerViewModel CreateTrainerViewModel(Trainer trainer)
         {
             if (trainer == null)
