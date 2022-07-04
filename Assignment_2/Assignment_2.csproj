@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PartialController.cs" />
     <Compile Include="Controllers\TrainerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -182,6 +183,14 @@
     <Compile Include="Migrations\202207031550307_NullableChangesTrainer.Designer.cs">
       <DependentUpon>202207031550307_NullableChangesTrainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202207040106255_PostalCodeMissing.cs" />
+    <Compile Include="Migrations\202207040106255_PostalCodeMissing.Designer.cs">
+      <DependentUpon>202207040106255_PostalCodeMissing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207040115111_StreetNoMissing.cs" />
+    <Compile Include="Migrations\202207040115111_StreetNoMissing.Designer.cs">
+      <DependentUpon>202207040115111_StreetNoMissing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -190,6 +199,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\TrainerCrudRepository.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\PartialTrainerViewModel.cs" />
     <Compile Include="ViewModels\TrainerViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -202,8 +212,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="img\paisaje-de-rick-y-morty-9415.jpg" />
     <Content Include="img\programmer-here-not-a-magician.jpg" />
+    <Content Include="img\paisaje-de-rick-y-morty-9415.jpg" />
+    <Content Include="img\good-beer.jpg" />
+    <None Include="img\1" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -253,7 +265,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Trainer\Create.cshtml" />
     <Content Include="Views\Shared\Navbar.cshtml" />
-    <Content Include="Views\Shared\TableOutput.cshtml" />
+    <Content Include="Views\Partial\GetAction.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -277,6 +289,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202207031550307_NullableChangesTrainer.resx">
       <DependentUpon>202207031550307_NullableChangesTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207040106255_PostalCodeMissing.resx">
+      <DependentUpon>202207040106255_PostalCodeMissing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207040115111_StreetNoMissing.resx">
+      <DependentUpon>202207040115111_StreetNoMissing.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

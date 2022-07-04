@@ -1,10 +1,5 @@
 ﻿using Assignment_2.Models;
 using Assignment_2.Repositories;
-using Assignment_2.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Assignment_2.Controllers
@@ -18,12 +13,12 @@ namespace Assignment_2.Controllers
         {
             _trainerRepos = new TrainerCrudRepository();
         }
+
         public ActionResult Index()
         {
             return View();
         }
 
-       
         // GET: Trainer/Details/5
         public ActionResult Details(int? id)
         {
@@ -34,7 +29,6 @@ namespace Assignment_2.Controllers
         // GET: Trainer/Create
         public ActionResult Create()
         {
-          
             return View();
         }
 
@@ -44,14 +38,12 @@ namespace Assignment_2.Controllers
         {
             if (!ModelState.IsValid)
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
-                try
+            try
             {
-                
                 _trainerRepos.Create(trainer);
                 _trainerRepos.Save();
 
-
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Index", "Home");
             }
             catch
             {
@@ -107,6 +99,7 @@ namespace Assignment_2.Controllers
         {
             if (disposing)
                 _trainerRepos.Dispose();
+            base.Dispose(disposing);
         }
     }
 }

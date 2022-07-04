@@ -1,0 +1,28 @@
+﻿@model Assignment_2.ViewModels.PartialTrainerViewModel
+
+
+<h1 style="font-family:'Cambria Math'" class="fa-hourglass-end">
+    Finding Magician
+</h1>
+
+@foreach (var trainer in Model.TrainerViewModels)
+{
+<tbody class="table table-responsive tableGod">
+    <tr>
+
+        <td scope="col" class="tableGod">
+            @trainer.FullName
+        </td>
+    </tr>
+    <tr>
+
+        <td scope="col" class="tableGod">
+            @trainer.Address
+        </td>
+    </tr>
+
+</tbody>
+
+    }
+
+

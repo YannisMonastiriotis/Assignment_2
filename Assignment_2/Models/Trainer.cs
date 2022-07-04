@@ -1,9 +1,8 @@
-﻿using System;
+﻿using Assignment_2.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
 
 namespace Assignment_2.Models
 {
@@ -14,14 +13,11 @@ namespace Assignment_2.Models
         [StringLength(50)]
         public string LastName { get; set; }
 
-
         [StringLength(30)]
         public string MiddleName { get; set; }
 
-
         [StringLength(50)]
         public string FirstName { get; set; }
-
 
         [StringLength(56)]
         public string Country { get; set; }
@@ -29,15 +25,13 @@ namespace Assignment_2.Models
         [StringLength(35)]
         public string City { get; set; }
 
-        public ushort PostalCode { get; set; }
+        [Required]
+        public int PostalCode { get; set; }
 
         [StringLength(35)]
-
         public string StreetName { get; set; }
 
-
-
-        public ushort? StreetNo { get; set; }
+        public int? StreetNo { get; set; }
 
         [DataType(DataType.MultilineText)]
         public string Details { get; set; }
@@ -50,21 +44,26 @@ namespace Assignment_2.Models
         [DataType(DataType.Currency)]
         public decimal? Salary { get; set; }
 
-
         [EmailAddress]
         public string EmailAddress { get; set; }
-
 
         public DateTime BirthDate { get; set; }
 
         [NotMapped]
-        public int Age { get; }
+        public ICollection<TrainerViewModel> TrainerViewModels { get; set; }
 
-        [NotMapped]
-        public string FullName { get; }
+        public Trainer()
+        {
+            TrainerViewModels = new List<TrainerViewModel>();
+        }
 
-        [NotMapped]
-        public string Address { get; }
+        //[NotMapped]
+        //public int Age { get; }
 
+        //[NotMapped]
+        //public string FullName { get; }
+
+        //[NotMapped]
+        //public string Address { get; }
     }
 }

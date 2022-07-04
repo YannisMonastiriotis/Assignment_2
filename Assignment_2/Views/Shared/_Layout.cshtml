@@ -6,25 +6,20 @@
     <title>@ViewBag.Title - Trainer Kreator </title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
 </head>
 <body>
-
 
     <div class="container body-content">
         @RenderBody()
         <hr />
-
     </div>
-
-
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-    <footer>
-        <p>&copy; @DateTime.Now.Kind Time: @DateTime.Now.Hour : @DateTime.Now.Minute - TrainerKreator™ Application</p>
-    </footer>
+<footer>
+    <p>&copy; @DateTime.Now.Kind Time: @DateTime.Now.Hour : @DateTime.Now.Minute - TrainerKreator™ Application</p>
+</footer>
 </body>
 
 </html>

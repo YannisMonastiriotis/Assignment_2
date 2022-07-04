@@ -4,13 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Net;
 using System.Web;
-using System.Web.Mvc;
 
 namespace Assignment_2.Repositories
 {
-    public class TrainerCrudRepository: IDisposable
+    public class TrainerCrudRepository : IDisposable
     {
         private readonly ApplicationDbContext _context;
 
@@ -29,6 +27,7 @@ namespace Assignment_2.Repositories
             var trainerViewModel = GetById(id);
             var viewModel = new TrainerViewModel()
             {
+                Id = trainerViewModel.Id,
                 Details = trainerViewModel.Details,
                 BirthDate = trainerViewModel.BirthDate,
                 City = trainerViewModel.City,
@@ -45,16 +44,17 @@ namespace Assignment_2.Repositories
                 StreetNo = trainerViewModel.StreetNo
             };
             return viewModel;
-
         }
-        public void Create (Trainer trainer)
+
+        public void Create(Trainer trainer)
         {
             if (trainer == null)
                 throw new HttpException(404, "Error at the beginning of Creation");
-               _context.Trainers.Add(trainer);
+            _context.Trainers.Add(trainer);
             _context.Trainers.Add(trainer);
             Save();
         }
+
         public void Create(TrainerViewModel trainerViewModel)
         {
             if (trainerViewModel == null)
@@ -62,7 +62,6 @@ namespace Assignment_2.Repositories
 
             var trainer = new Trainer()
             {
-
                 Details = trainerViewModel.Details,
                 BirthDate = trainerViewModel.BirthDate,
                 City = trainerViewModel.City,
@@ -80,8 +79,39 @@ namespace Assignment_2.Repositories
             };
 
             _context.Trainers.Add(trainer);
-                Save();
+            Save();
         }
+
+        public TrainerViewModel CreateTrainerViewModel(Trainer trainer)
+        {
+            if (trainer == null)
+                throw new HttpException(404, "Error at the beginning of Creation");
+
+            var trainerViewModel = new TrainerViewModel()
+            {
+                Id = trainer.Id,
+                Details = trainer.Details,
+                BirthDate = trainer.BirthDate,
+                City = trainer.City,
+                Country = trainer.Country,
+                PostalCode = trainer.PostalCode,
+                PhoneNum = trainer.PhoneNum,
+                EmailAddress = trainer.EmailAddress,
+                FirstName = trainer.FirstName,
+                MiddleName = trainer.MiddleName,
+                LastName = trainer.LastName,
+                Gender = trainer.Gender,
+                StreetName = trainer.StreetName,
+                Salary = trainer.Salary,
+                StreetNo = trainer.StreetNo
+            };
+
+            return trainerViewModel;
+        }
+
+  
+
+        //GETING ALL TRAINERS
         public IEnumerable<Trainer> GetAll()
         {
             var trainers = _context
@@ -92,7 +122,6 @@ namespace Assignment_2.Repositories
 
         public Trainer GetById(int? id)
         {
-
             if (id == 0)
                 throw new HttpException(404, "Error at the beginning of Geting");
             var trainer = GetAll()
@@ -100,6 +129,7 @@ namespace Assignment_2.Repositories
 
             return trainer;
         }
+
         public void Update(Trainer trainer)
         {
             if (trainer == null)
@@ -107,7 +137,6 @@ namespace Assignment_2.Repositories
 
             _context.Entry(trainer).State = EntityState.Modified;
             Save();
-
         }
 
         public void Delete(int? id)
