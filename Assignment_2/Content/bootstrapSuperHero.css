@@ -8383,8 +8383,12 @@ a.list-group-item-danger.active {
     background-color: #536271;
 }
 
+[type="button"] {
+    margin-top: 50px;
+    box-shadow: 0 0 10px black;
+}
 [type="date"] {
-    background: #5a656f url(C:\Users\rizla\Projects\3_7\Assignment_2\Assignment_2\img\paisaje-de-rick-y-morty-9415.jpg) 97% 50% ;
+    background: rgb(83 98 113 / 0.53) url(C:\Users\rizla\Projects\3_7\Assignment_2\Assignment_2\img\paisaje-de-rick-y-morty-9415.jpg) 97% 50% ;
     background-repeat: no-repeat;
     max-width: 100%;
     height: auto;
@@ -8421,6 +8425,7 @@ input {
     box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
     width: 130px;
     height: 25px;
+
 }
 
 form {
@@ -8512,7 +8517,22 @@ form {
     height: 100%;
     background-position: center;
 
+
 }
 .form-content {
     position: relative;
+    font-size:15px;
 }
+
+
+.row {
+    height: 100px;
+    background-color: green;
+}
+
+.container {
+    margin-top: 50px;
+    box-shadow: 0 0 30px black;
+    padding: 0 15px 0 15px;
+}
+

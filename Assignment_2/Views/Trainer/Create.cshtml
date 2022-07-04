@@ -4,7 +4,7 @@
     ViewBag.Title = "Create";
 }
 
-<div class="no-repeat-form class circle">
+<div class="no-repeat-form class circle container">
     <div style="padding:2%">
 
     </div>
@@ -135,19 +135,22 @@
                     @Html.EditorFor(model => model.BirthDate, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.BirthDate, "", new { @class = "text-danger" })
                 </div>
-            </div>
-            <div class="col-md-offset-2 col-md-10" style="border-block-end:groove">
-                <div class="form-group">
+                <div class="col-md-offset-10 col-md-2" style="border-block-end:groove">
 
-                    <button  class="btn btn-default" role="button" type="submit" value="Create" style="align-self:auto;align-items:center;align-content:center" /> Submit
+
+                    <button class="btn btn-default class circle" role="button" type="submit" value="Create" style="align-self: auto; font-family: 'Cambria Math'; align-items: center; align-content: center; background-color: #6353ef; border-color: #848bdd; padding: 8%; margin: 20%; box-shadow: inset " /> Submit
+
+
                 </div>
             </div>
+
+          
         </div>
             }
 
-            <div class="badge focus sr-only-focusable" style="background-color:#bdd3b4;font-family:'Cambria Math';text-decoration-style:double" >
+            <div class="badge focus  " style="background-color:#b3a5eb;font-family:'Cambria Math';text-decoration-style:double" >
 
-                <a class="btn btn-default" role="button" href="~/Home/Index" style="background-color: #848bdd; border-color: #848bdd; padding: 2%;margin:10%; outline-color: #848bdd;box-shadow:inset "  > Back to Index</a>
+                <a class="btn btn-default class circle" role="button" href="~/Home/Index" style="background-color: #6353ef; border-color: #848bdd; padding: 6%; margin: 30%; box-shadow: 0 0 10px #6353ef; "  > Back to Index </a>
 
             </div>
 
