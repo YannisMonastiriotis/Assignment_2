@@ -8384,7 +8384,7 @@ a.list-group-item-danger.active {
 }
 
 [type="date"] {
-    background: #5a656f url(C:\Users\rizla\Projects\3_7\Assignment_2\Assignment_2\img\paisaje-de-rick-y-morty-9415.jpg) 97% 50% no-repeat;
+    background: #5a656f url(C:\Users\rizla\Projects\3_7\Assignment_2\Assignment_2\img\paisaje-de-rick-y-morty-9415.jpg) 97% 50% ;
     background-repeat: no-repeat;
     max-width: 100%;
     height: auto;
@@ -8493,7 +8493,7 @@ form {
 
 .form-bg {
 
-    opacity: 0.6;
+    opacity: 50%;
     position: absolute;
     left: 0;
     top: 0;

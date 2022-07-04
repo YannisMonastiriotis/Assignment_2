@@ -1,28 +1,33 @@
 ﻿@model Assignment_2.ViewModels.PartialTrainerViewModel
+@{
+    var Count = 0;
+}
 
-
-<h1 style="font-family:'Cambria Math'" class="fa-hourglass-end">
-    Finding Magician
+<h1 style="font-family:'Cambria Math';align-content:center" class="fa-hourglass-end">
+    Trainer Results
 </h1>
-
-@foreach (var trainer in Model.TrainerViewModels)
-{
 <tbody class="table table-responsive tableGod">
+    @foreach (var trainer in Model.TrainerViewModels)
+    {
+
     <tr>
-
-        <td scope="col" class="tableGod">
-            @trainer.FullName
-        </td>
+        <th scope="row">@Count++</th>   
+        <td> @trainer.FullName</td>
+        <td> @trainer.Address</td>
+        <td> @trainer.Age</td>
+        <td> @trainer.FullName</td>
+        <td> @trainer.Country</td>
+        <td>@trainer.Details</td>
+        <td> @trainer.EmailAddress</td>
+        <td> @trainer.Salary</td>
+        <td>@trainer.PhoneNum</td>
+        <td>@trainer.Gender</td>
     </tr>
-    <tr>
+     
 
-        <td scope="col" class="tableGod">
-            @trainer.Address
-        </td>
-    </tr>
-
-</tbody>
-
+       
+ 
     }
 
 
+</tbody>
