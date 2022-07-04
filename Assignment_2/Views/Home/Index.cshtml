@@ -1,32 +1,34 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<div class="class circle">
-    <div class="popover-title">
-        <h4 style="text-align-last:center">Searching for the magician that creates trainers out of thin air</h4>
-    </div>
 
-    <div class="class circle" style="background-image: url('/img/paisaje-de-rick-y-morty-9415.jpg')" );>
+<div @*class="container row circle  class"*@>
+    <div class="class circle">
+        <div  style="text-align-last:center;margin:1%;padding:1%;" class="popover-title">
+            <h4 >Searching for the magician that creates trainers out of thin air</h4>
+        </div>
 
-        @Html.Partial("Navbar")
-        <div class="row">
-            <div class="col-md-4" style="padding:10%">
-                <a class="btn btn-default class circle " style="justify-self:right" href="https://github.com/GiannisMonastiriotis/Assignment_2.git">&raquo;Get it from git.. Almost there! -  Thank You!</a>
+        <div class="class circle container " style="background-image: url('/img/paisaje-de-rick-y-morty-9415.jpg')" );>
+
+            @Html.Partial("Navbar")
+            <div >
+                <div class="col-md-4" style="padding:10%">
+                    <a class="container navbar-fixed-top btn-default class circle " style="padding:5px" href="https://github.com/GiannisMonastiriotis/Assignment_2.git">&raquo;Get This Project In Git. We love it here in People Cert!</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<p style="padding-top:2%"> </p>
+    <p style="padding-top:2%"> </p>
     <div class="class circle no-repeat cat-wrap" );>
         <img class="cat-bg" style="background-image: url('/img/programmer-here-not-a-magician.jpg')" />
         <div class="aftercat-content">
-            <table class="table table-responsive tableGod">
+            <table class="table table-bordered tableGod">
                 <thead class="tableGod">
 
 
-                    <tr>
-                        <th scope="col">#</th>
+                    <tr style="font-size:140%">
+                        <th scope="col" >#</th>
                         <th scope="col">Trainer</th>
                         <th scope="col">Full Name</th>
                         <th scope="col">Adress</th>
@@ -37,7 +39,7 @@
                         <th scope="col">Salary</th>
                         <th scope="col">Phone Num.</th>
                         <th scope="col">Gender</th>
-                        
+
                     </tr>
 
 
@@ -48,6 +50,7 @@
                 }
 
             </table>
-             </div>
         </div>
-</p>
+    </div>
+ 
+</div>

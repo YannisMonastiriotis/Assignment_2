@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
+<head >
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Trainer Kreator </title>
@@ -8,18 +8,18 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-    </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
-<footer>
-    <p>&copy; @DateTime.Now.Kind Time: @DateTime.Now.Hour : @DateTime.Now.Minute - TrainerKreator™ Application</p>
-</footer>
-</body>
-
+    <div class="container">
+        <div>
+            @RenderBody()
+            <hr />
+        </div>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+        <footer>
+            <p>&copy; @DateTime.Now.Kind Time: @DateTime.Now.Hour : @DateTime.Now.Minute - TrainerKreator™ Application</p>
+        </footer>
+        </div>
+    </body>
+    
 </html>
