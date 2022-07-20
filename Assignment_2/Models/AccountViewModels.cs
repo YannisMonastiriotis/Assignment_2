@@ -13,6 +13,8 @@ namespace Assignment_2.Models
     public class ExternalLoginListViewModel
     {
         public string ReturnUrl { get; set; }
+
+       
     }
 
     public class SendCodeViewModel

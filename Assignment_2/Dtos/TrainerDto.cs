@@ -7,6 +7,9 @@ namespace Assignment_2.Dtos
 {
     public class TrainerDto
     {
+
+        public int MyProperty { get; set; }
+
         public int TrainedId { get; set; }
     }
 }
